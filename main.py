@@ -14,7 +14,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 # Dropdown menu to select the level
-level = st.selectbox("Select Level", ["Date Puzzle", "Date-Day-Month Puzzle"])
+level = st.selectbox("Puzzle Type", ["Date-A-Day Puzzle", "Panchang Paheli"])
 
 # Function to handle level 1
 def level1():
@@ -31,7 +31,7 @@ def level1():
     date=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
     number = st.selectbox("Select Date",date)
     number=int(number)
-    st.write(f"Solution of date :{number}")
+    st.write(f"Solution")
     if number in (29,30,31,32): 
         if number == 29:
             number = 33
@@ -149,7 +149,7 @@ def level3():
                     
                 solutions_svg(all_solutions, filename='first_solution.svg',date_number=number2,date_position=(row,column),month_name=month_input1,month_position=(m_row,m_column),day_name=day_input,day_position=day_number2,level=3,columns=7, colour=COLOURS.get)
                 svg_content = open("first_solution.svg", "r").read()
-                st.write(f"Solution for : {number2} {month_input1} {day_input}")
+                st.write(f"Solution")
                 st.image(svg_content, width=2000)
             else:
                 st.write("Enter valid infomation")
