@@ -158,7 +158,7 @@ def level3():
     else:
                 st.write("Enter valid infomation")
     
-if level == "Date Puzzle":
+if level == "Date-A-Day Puzzle":
     level1()
-elif level == "Date-Day-Month Puzzle":
+elif level == "Panchang Paheli":
     level3()
